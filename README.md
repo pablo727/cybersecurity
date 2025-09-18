@@ -66,3 +66,30 @@ Output format:
 ```
 
 💡 This folder combines manual labs (with Linux tools) and automation scripts (with Python) to strengthen cybersecurity skills.
+
+---
+
+## 🔪 John the Ripper Lab
+
+### Lab: Password Cracking with John the Ripper
+- **Tools Used:** `john`, `openssl`, Bash scripting
+- **Steps Performed:**
+  1. Created a custom `unshadow.sh` script to combine `/etc/passwd` and `/etc/shadow`.
+  2. Created test users (`alice`, `bob`, `charlie`) with SHA-512 encrypted passwords.
+  3. Prepared a sample password hash file (`mypasswd.example`) for safe sharing.
+  4. Used `john` with the RockYou wordlist to attempt cracking passwords.
+  5. Learned to use `--format=sha512crypt`, `--show`, and session restoration (`--restore`) for efficient cracking.
+
+- **Lessons Learned:**
+  - John the Ripper can detect password weaknesses with wordlists.
+  - SHA-512 hashes are stronger and slower to crack, so wordlists must be targeted.
+  - Sensitive files (`mypasswd`) must never be pushed to GitHub—use examples or dummy data.
+  - `.gitignore` prevents accidental commits of passwords and session artifacts.
+
+### Included Files:
+- `unshadow.sh`: Bash script to generate combined passwd/shadow file for John.
+- `mypasswd.example`: Example hash file with dummy passwords.
+- `testlist.txt`: Minimal test wordlist for fast cracking demonstration.
+- `.gitignore`: Prevents sensitive files and John artifacts from being committed.
+
+💡 This lab demonstrates password security, hash encryption, and safe handling of sensitive files when practicing password cracking exercises.
