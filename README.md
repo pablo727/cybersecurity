@@ -71,6 +71,8 @@ Output format:
 
 ## 🔪 John the Ripper Lab
 
+```text
+
       ██╗ ██████╗███╗   ██╗     ██████╗ ███████╗██████╗ ██████╗ ██████╗ 
       ██║██╔════╝████╗  ██║    ██╔═══██╗██╔════╝██╔══██╗██╔══██╗██╔══██╗
       ██║██║     ██╔██╗ ██║    ██║   ██║█████╗  ██████╔╝██║  ██║██████╔╝
@@ -78,6 +80,7 @@ Output format:
 ╚█████╔╝╚██████╗██║ ╚████║    ╚██████╔╝███████╗██║  ██║██████╔╝██║     
  ╚════╝  ╚═════╝╚═╝  ╚═══╝     ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═════╝ ╚═╝     
                   JOHN THE RIPPER – PASSWORD CRACKING LAB
+```
 
 ### Lab: Password Cracking with John the Ripper
 - **Tools Used:** `john`, `openssl`, Bash scripting
