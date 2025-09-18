@@ -1,0 +1,13 @@
+# Ignore sensitive John/OS artifacts
+mypasswd
+mypasswd.*
+*.pot
+*.rec
+john.pot
+john.*
+labsession*
+labsession.log
+
+# Large artifacts
+*.pcap
+*.raw
