@@ -104,3 +104,26 @@ Output format:
 - `.gitignore`: Prevents sensitive files and John artifacts from being committed.
 
 💡 This lab demonstrates password security, hash encryption, and safe handling of sensitive files when practicing password cracking exercises.
+
+
+### Lab: Combine /etc/passwd + /etc/shadow
+- Lab: Combine system password and shadow files for John-the-Ripper
+- **Tools Used:** `Python`, `spwd`, `pwd`, `pathlib`
+- Purpose: Safely combine /etc/passwd and /etc/shadow into a format suitable for John-the-Ripper password cracking exercises.
+- **Steps Performed:**
+- Created `combine_unshadow.py` to read system passwd and shadow files.
+- Filtered out invalid or locked passwords (`"", "!", "*", "!!", "*NP*"`).
+- Combined valid entries with UID, GID, home directory, shell, and GECOS info.
+- Saved the output to a secure file (default: `~/john-lab/mypasswd`) with `600` permissions.
+- Optionally sets ownership to the sudo user who ran the script.
+
+- **Lessons Learned:**
+- Root privileges are required to read /etc/shadow.
+- Python can safely automate system file processing while maintaining proper file permissions.
+- Always exclude real password files when pushing to GitHub; use example or dummy hashes instead.
+
+- **Included files:**
+- `combine_unshadow.py`: Python script to safely merge passwd and shadow entries for testing.
+
+- **Example Usage:**
+`sudo python3 combine_unshadow.py -o ~/john-lab/mypasswd`
